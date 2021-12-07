@@ -43,15 +43,20 @@ $(function () {
   })
   $("#img-troll").click(function() {
       var audio = document.getElementById("trala");
-      console.log('fdsukogf')
       audio.play();
   })
 });
 function play() {
   document.querySelector('.landing').style.opacity = "0"
+  document.querySelector('.landing').style.display = "none"
   setTimeout(() => {
     document.querySelector('.main').style.display = "flex"
     setTimeout(() => {document.querySelector('.main').style.opacity = "1"}, 100)
+    setTimeout(() => { showVideo()}, 200)
   }, 1000)
   return "Bravo tu as trouvé";
+}
+
+function showVideo() {
+  
 }
