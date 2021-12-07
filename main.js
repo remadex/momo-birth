@@ -65,15 +65,32 @@ $(function () {
   })
   $("#img-troll").click(function() {
       var audio = document.getElementById("trala");
-      console.log('fdsukogf')
+      audio.play();
+  })
+  $("#momo").click(function() {
+      var audio = document.getElementById("momo-sound");
       audio.play();
   })
 });
 function play() {
   document.querySelector('.landing').style.opacity = "0"
+  document.querySelector('.landing').style.display = "none"
   setTimeout(() => {
     document.querySelector('.main').style.display = "flex"
     setTimeout(() => {document.querySelector('.main').style.opacity = "1"}, 100)
+    setTimeout(() => { showVideo()}, 200)
   }, 1000)
   return "Bravo tu as trouvé";
+}
+document.getElementById("douze").addEventListener("click", () => {
+  var video = document.getElementById("video-max");
+  video.play();
+  var audio = document.getElementById("bonappetit");
+  audio.play();
+} )
+function showVideo() {
+  var video = document.getElementById("video-max");
+  video.play();
+  var audio = document.getElementById("bonappetit");
+  audio.play();
 }
