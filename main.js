@@ -45,6 +45,10 @@ $(function () {
       var audio = document.getElementById("trala");
       audio.play();
   })
+  $("#momo").click(function() {
+      var audio = document.getElementById("momo-sound");
+      audio.play();
+  })
 });
 function play() {
   document.querySelector('.landing').style.opacity = "0"
@@ -56,7 +60,15 @@ function play() {
   }, 1000)
   return "Bravo tu as trouvé";
 }
-
+document.getElementById("douze").addEventListener("click", () => {
+  var video = document.getElementById("video-max");
+  video.play();
+  var audio = document.getElementById("bonappetit");
+  audio.play();
+} )
 function showVideo() {
-  
+  var video = document.getElementById("video-max");
+  video.play();
+  var audio = document.getElementById("bonappetit");
+  audio.play();
 }
