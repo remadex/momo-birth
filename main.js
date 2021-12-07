@@ -1,88 +1,110 @@
 $(function () {
   // Recup titre de la page
-  var pageTitle = $("title").text();
+  var pageTitle = $('title').text();
   // Changement dynamique du title
   $(window).blur(function () {
-    $("title").text("Goulagwe");
+    $('title').text('Goulagwe');
   });
   // Recup titre initial lorsque page active
   $(window).focus(function () {
-    $("title").text(pageTitle);
+    $('title').text(pageTitle);
   });
 
   function moveDiv() {
-    var $span = $("#random");
+    var $span = $('#random');
 
     $span.fadeOut(1000, function () {
       var maxLeft = $(window).width() - $span.width();
       var maxTop = $(window).height() - $span.height();
-      var leftPos = Math.floor(Math.random() * (maxLeft + 1))
-      var topPos = Math.floor(Math.random() * (maxTop + 1))
+      var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+      var topPos = Math.floor(Math.random() * (maxTop + 1));
 
-      $span.css({
-        left: leftPos,
-        top: topPos
-      }).fadeIn(1000);
+      $span
+        .css({
+          left: leftPos,
+          top: topPos,
+        })
+        .fadeIn(1000);
     });
-  };
+  }
 
   moveDiv();
   setInterval(moveDiv, 1000);
 
+  setInterval(() => {
+    $('#flying').css('margin-left', `${Math.ceil(Math.random() * 1000)}px`);
+    $('#flying').css('margin-top', `${Math.ceil(Math.random() * 1000)}px`);
+    $('#flying').css('margin-bottom', `${Math.ceil(Math.random() * 1000)}px`);
+    $('#flying').css('margin-right', `${Math.ceil(Math.random() * 1000)}px`);
+  }, 500);
 
-  function triptyrade(){
+  $('#flying').click(() => {
+    console.log('banane');
+    alert(
+      'AMAURYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY est-ce que tu veux du chocolat ?????????? Xd Lel KeKW Sadge Kappa Ptdr Rofl :chocolat:'
+    );
+  });
 
-  }
-
+  function triptyrade() {}
 
   function moveDiv1() {
-    var $span = $("#triptyrade1");
+    var $span = $('#triptyrade1');
 
     $span.fadeOut(1000, function () {
       var maxLeft = $(window).width() - $span.width();
       var maxTop = $(window).height() - $span.height();
-      var leftPos = Math.floor(Math.random() * (maxLeft + 1))
-      var topPos = Math.floor(Math.random() * (maxTop + 1))
+      var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+      var topPos = Math.floor(Math.random() * (maxTop + 1));
 
-      $span.css({
-        left: leftPos,
-        top: topPos
-      }).fadeIn(1000);
+      $span
+        .css({
+          left: leftPos,
+          top: topPos,
+        })
+        .fadeIn(1000);
     });
-  };
+  }
 
-  $(document).mousemove(function(e) {
-      let path = ["green", "orange", "black"]
-      $(".landing").css('background-color', path[Math.floor(Math.random() * path.length)]);
-      $(".landing > *").css('color', path[Math.floor(Math.random() * path.length)]);
-    
-  
+  $(document).mousemove(function (e) {
+    let path = ['green', 'orange', 'black'];
+    $('.landing').css(
+      'background-color',
+      path[Math.floor(Math.random() * path.length)]
+    );
+    $('.landing > *').css(
+      'color',
+      path[Math.floor(Math.random() * path.length)]
+    );
   });
 
-  $("#trolo").click(function() {
-      var audio = document.getElementById("troll");
-      audio.play();
-  })
-  $("#img-troll").click(function() {
-      var audio = document.getElementById("trala");
-      audio.play();
-  })
-  $("#momo").click(function() {
-      var audio = document.getElementById("momo-sound");
-      audio.play();
-  })
+  $('#trolo').click(function () {
+    var audio = document.getElementById('troll');
+    audio.play();
+  });
+  $('#img-troll').click(function () {
+    var audio = document.getElementById('trala');
+    audio.play();
+  });
+  $('#momo').click(function () {
+    var audio = document.getElementById('momo-sound');
+    audio.play();
+  });
 });
 function play() {
-  document.querySelector('.landing').style.opacity = "0"
-  document.querySelector('.landing').style.display = "none"
+  document.querySelector('.landing').style.opacity = '0';
+  document.querySelector('.landing').style.display = 'none';
   setTimeout(() => {
-    document.querySelector('.main').style.display = "flex"
-    setTimeout(() => {document.querySelector('.main').style.opacity = "1"}, 100)
-    setTimeout(() => { showVideo()}, 200)
-  }, 1000)
-  return "Bravo tu as trouvé";
+    document.querySelector('.main').style.display = 'flex';
+    setTimeout(() => {
+      document.querySelector('.main').style.opacity = '1';
+    }, 100);
+    setTimeout(() => {
+      showVideo();
+    }, 200);
+  }, 1000);
+  return 'Bravo tu as trouvé';
 }
-document.getElementById("douze").addEventListener("click", () => {
+document.getElementById('douze').addEventListener('click', () => {
   // var video = document.getElementById("video-max");
   // video.play();
   // var audio = document.getElementById("bonappetit");
@@ -104,7 +126,6 @@ function showVideo() {
   // video.play();
   // var audio = document.getElementById("bonappetit");
   // audio.play();
-
 }
 
 var object = {
@@ -126,49 +147,66 @@ var object = {
   link16: false,
   link17: false,
   link18: false,
-}
+};
 
 function clickEvent(e) {
   object[e.id] = true;
 
-  if(object.link1 && object.link2 && object.link3 && object.link4 && object.link5 && object.link6 && object.link7 && object.link8 && object.link9 && object.link10 && object.link11 && object.link12 && object.link13 && object.link14 && object.link15 && object.link16 && object.link17 && object.link18) {
-    document.getElementById('showLove').style.display = "block";
+  if (
+    object.link1 &&
+    object.link2 &&
+    object.link3 &&
+    object.link4 &&
+    object.link5 &&
+    object.link6 &&
+    object.link7 &&
+    object.link8 &&
+    object.link9 &&
+    object.link10 &&
+    object.link11 &&
+    object.link12 &&
+    object.link13 &&
+    object.link14 &&
+    object.link15 &&
+    object.link16 &&
+    object.link17 &&
+    object.link18
+  ) {
+    document.getElementById('showLove').style.display = 'block';
     setTimeout(() => {
-      document.getElementById('showLove').style.opacity = "1";
-    }, 200)
-    document.getElementById('showLove').addEventListener(() => {
+      document.getElementById('showLove').style.opacity = '1';
+    }, 200);
+    document.getElementById('showLove').addEventListener("click", () => {
+      console.log("fdsqoihs")
       var audio = document.getElementById("sexylove");
       audio.play();
+      var bon = document.getElementById("bonappetit");
+      bon.pause();
     })
   }
 }
 
-
-
-$(document).ready(function(){
+$(document).ready(function () {
   animateDiv('.a');
   animateDiv('.b');
   animateDiv('.c');
   animateDiv('.d');
 });
 
-function makeNewPosition(){
-  
+function makeNewPosition() {
   // Get viewport dimensions (remove the dimension of the div)
   var h = $(window).height() - 50;
   var w = $(window).width() - 50;
-  
+
   var nh = Math.floor(Math.random() * h);
   var nw = Math.floor(Math.random() * w);
-  
-  return [nh,nw];    
-  
+
+  return [nh, nw];
 }
 
-function animateDiv(myclass){
+function animateDiv(myclass) {
   var newq = makeNewPosition();
-  $(myclass).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
-    animateDiv(myclass);        
+  $(myclass).animate({ top: newq[0], left: newq[1] }, 1000, function () {
+    animateDiv(myclass);
   });
-  
-};
+}
