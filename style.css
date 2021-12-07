@@ -131,3 +131,9 @@ body{
   left: 0;
   top: 0;
 }
+
+.main #video-max {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
