@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
   <title>Joyeux anniversaire</title>
@@ -72,17 +75,19 @@
       <a id="link18" onclick="clickEvent(this)" target="_blank" href="https://www.xxxfiles.com/">e</a>
     </h1>
     <p>Pour accéder au contenu suivant, tu dois cliquer sur les liens de chaque lettre</p>
-    <button id="showLove">
+    <!-- <a href="images/momo1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a> -->
+    <a href="images/love.png" id="showLove" data-lightbox="image-1" data-title="Radhja est meilleur mais aujourd'hui, j'accepte que Mr de petit four soit meilleur">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
       </svg>
-    </button>
+    </a>
     <video id="video-max" muted loop>
       <source src="./video/max.MOV" type="video/mp4">
     </video>
     <audio id="bonappetit" src="./sound/bonappetit.mp3" loop></audio>
+    <audio id="sexylove" src="./sound/sexylove.mp3" loop></audio>
     <button id="douze">btn temporaire pour remplacer le play</button>
-    <div>
+    <div id="triptyrade">
       <div class='a'><h1>Mange ton doigt dans ta mère</h1> </div>
       <div class='b'><h1>Une pizza dans le cul fais fuir les malotrus</h1></div></div>
       <div class='c'><h1>My bestie and your bestie, standing by my anus</h1></div>
