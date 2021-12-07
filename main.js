@@ -87,6 +87,7 @@ $(function () {
   });
   $('#momo').click(function () {
     var audio = document.getElementById('momo-sound');
+    audio.volume = 0.5
     audio.play();
   });
 });
