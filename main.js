@@ -104,28 +104,14 @@ function play() {
   }, 1000);
   return 'Bravo tu as trouvé';
 }
-document.getElementById('douze').addEventListener('click', () => {
-  // var video = document.getElementById("video-max");
-  // video.play();
-  // var audio = document.getElementById("bonappetit");
-  // audio.play();
-  document.getElementById('showLove').style.display = "block";
-    setTimeout(() => {
-      document.getElementById('showLove').style.opacity = "1";
-    }, 200)
-    document.getElementById('showLove').addEventListener("click", () => {
-      console.log("fdsqoihs")
-      var audio = document.getElementById("sexylove");
-      audio.play();
-      var bon = document.getElementById("bonappetit");
-      bon.pause();
-    })
-} )
 function showVideo() {
-  // var video = document.getElementById("video-max");
-  // video.play();
-  // var audio = document.getElementById("bonappetit");
-  // audio.play();
+  var video = document.getElementById("video-max");
+  video.play();
+  var audio = document.getElementById("bonappetit");
+  audio.play();
+  document.querySelector('#log').addEventListener('click', () => {
+    alert('Et vraiment cliquer, pas avec la molette ;)')
+  })
 }
 
 var object = {
@@ -151,6 +137,7 @@ var object = {
 
 function clickEvent(e) {
   object[e.id] = true;
+  console.log("qsqsqqsd")
 
   if (
     object.link1 &&
@@ -172,17 +159,7 @@ function clickEvent(e) {
     object.link17 &&
     object.link18
   ) {
-    document.getElementById('showLove').style.display = 'block';
-    setTimeout(() => {
-      document.getElementById('showLove').style.opacity = '1';
-    }, 200);
-    document.getElementById('showLove').addEventListener("click", () => {
-      console.log("fdsqoihs")
-      var audio = document.getElementById("sexylove");
-      audio.play();
-      var bon = document.getElementById("bonappetit");
-      bon.pause();
-    })
+    finishHim();
   }
 }
 
@@ -209,4 +186,70 @@ function animateDiv(myclass) {
   $(myclass).animate({ top: newq[0], left: newq[1] }, 1000, function () {
     animateDiv(myclass);
   });
+}
+
+
+function finishHim() {
+  document.getElementById('showLove').style.display = "block";
+    setTimeout(() => {
+      document.getElementById('showLove').style.opacity = "1";
+    }, 200)
+    document.getElementById('showLove').addEventListener("click", () => {
+      var audio = document.getElementById("sexylove");
+      audio.play();
+      var bon = document.getElementById("bonappetit");
+      bon.pause();
+      document.querySelector('.lb-close').addEventListener("click", () => {
+        var audio = document.getElementById("sexylove");
+        audio.pause();
+        recursive();
+        function recursive() {
+          var dramix = document.getElementById("dramix");
+          dramix.play();
+          setTimeout(() => {
+            var seb = document.getElementById("seb");
+            seb.play();
+            setTimeout(() => {
+              var max = document.getElementById("max");
+              max.play();
+              setTimeout(() => {
+                recursive();
+              }, 2000)
+            }, 2000)
+          }, 2000)
+        }
+      })
+      document.querySelector('#lightboxOverlay').addEventListener("click", () => {
+        var audio = document.getElementById("sexylove");
+        audio.pause();
+        document.querySelector('#triptyrade').style.display = "none";
+        document.querySelector('.a').style.display = "none";
+        document.querySelector('.b').style.display = "none";
+        document.querySelector('.c').style.display = "none";
+        document.querySelector('.d').style.display = "none";
+        document.querySelector('.txt0').style.display = "none";
+        document.querySelector('.txt').style.display = "none";
+        document.querySelector('.txt2').style.display = "none";
+        recursive();
+        function recursive() {
+          var dramix = document.getElementById("dramix");
+          dramix.play();
+          setTimeout(() => {
+            var seb = document.getElementById("seb");
+            seb.play();
+            setTimeout(() => {
+              var max = document.getElementById("max");
+              max.play();
+              setTimeout(() => {
+                recursive();
+              }, 2000)
+            }, 2000)
+          }, 2000)
+        }
+      })
+    })
+}
+
+function goulagwe(){
+  finishHim();
 }

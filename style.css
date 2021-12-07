@@ -9,7 +9,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -60,11 +60,15 @@ body{
   padding: 50px;
 }
 .landing .highlight{
-  font-size: 8px;
+  font-size: 20px;
   font-weight: 900;
   padding-top: 40px;
 }
-
+.size{
+  width: 500px;
+  display: block;
+  margin-left: -300px;
+}
 .jquery {
   font-weight: 900;
   position: absolute;
@@ -117,15 +121,19 @@ body{
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
   right: 0;
   bottom: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: url("./images/fond.gif");
   transition: all 1s ease;
-  opacity: 1;
+  opacity: 0;    
+  font-family: 'Creepster', cursive;
+
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .main #douze {
@@ -157,16 +165,83 @@ body{
   transition: all 2s ease;
   background: none;
   border: none;
-  width: 50px;
+  width: 300px;
+  z-index: 1000;
   cursor: pointer;
+}
+
+.main .txt{
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  z-index: 10;
+  background: blue;
+}
+.main .txt2{
+  margin: 0;
+  color: blue;
+  text-align: center;
+  background: blue;
+}
+.main .txt0{
+  margin: 0;
+  color: blue;
+  text-align: center;
+  background: blue;
+}
+
+.main > p{
+  width: 800px;
+  z-index: 10;
+  text-align: center;
 }
 
 .main #showLove svg {
   fill: red;
 }
-.triptyrade{
-  
+
+.main .xdouze {
+  position: absolute;
+  left: 15px;
+  bottom: 30px;
+  width: 400px;
 }
+.main .xdouze2 {
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  border-radius: 50%;
+  width: 400px;
+}
+.heartbeat {
+	animation: heartbeat 1.5s ease-in-out infinite both;
+}
+ @keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+
+
 div.a {
    background-color:red;
   position:absolute;
