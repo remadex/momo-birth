@@ -72,3 +72,8 @@ function showVideo() {
   var audio = document.getElementById("bonappetit");
   audio.play();
 }
+
+function clickEvent() {
+  console.log(this);
+  const id = this.id;
+}
