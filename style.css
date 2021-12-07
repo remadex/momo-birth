@@ -137,3 +137,46 @@ body{
   right: 0;
   bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.a {
+   background-color:red;
+  position:absolute;
+      
+  }
+  
+  div.b {
+   background-color:salmon;
+  position:absolute;
+      
+  }
+  div.c {
+   background-color:green;
+  position:absolute;
+      
+  }
+  div.d {
+   background-color:yellow;
+  position:absolute;
+      
+  }
