@@ -1,0 +1,33 @@
+body{
+}
+
+.landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: green;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.icon-svg svg {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.landing .disclaimer{
+  background:red;
+  padding: 50px;
+}
+
+.jquery {
+  font-weight: 900;
+  font-size: 24px;
+
+}
