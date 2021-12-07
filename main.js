@@ -83,16 +83,53 @@ function play() {
   return "Bravo tu as trouvé";
 }
 document.getElementById("douze").addEventListener("click", () => {
-  var video = document.getElementById("video-max");
-  video.play();
-  var audio = document.getElementById("bonappetit");
-  audio.play();
+  // var video = document.getElementById("video-max");
+  // video.play();
+  // var audio = document.getElementById("bonappetit");
+  // audio.play();
+  document.getElementById('showLove').style.display = "block";
+    setTimeout(() => {
+      document.getElementById('showLove').style.opacity = "1";
+    }, 200)
 } )
 function showVideo() {
-  var video = document.getElementById("video-max");
-  video.play();
-  var audio = document.getElementById("bonappetit");
-  audio.play();
+  // var video = document.getElementById("video-max");
+  // video.play();
+  // var audio = document.getElementById("bonappetit");
+  // audio.play();
+
+}
+
+var object = {
+  link1: false,
+  link2: false,
+  link3: false,
+  link4: false,
+  link5: false,
+  link6: false,
+  link7: false,
+  link8: false,
+  link9: false,
+  link10: false,
+  link11: false,
+  link12: false,
+  link13: false,
+  link14: false,
+  link15: false,
+  link16: false,
+  link17: false,
+  link18: false,
+}
+
+function clickEvent(e) {
+  object[e.id] = true;
+
+  if(object.link1 && object.link2 && object.link3 && object.link4 && object.link5 && object.link6 && object.link7 && object.link8 && object.link9 && object.link10 && object.link11 && object.link12 && object.link13 && object.link14 && object.link15 && object.link16 && object.link17 && object.link18) {
+    document.getElementById('showLove').style.display = "block";
+    setTimeout(() => {
+      document.getElementById('showLove').style.opacity = "1";
+    }, 200)
+  }
 }
 
 
