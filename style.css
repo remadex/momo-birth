@@ -150,44 +150,9 @@ body{
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1{
-  font-family: 'Sigmar One', cursive;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 .main #showLove svg {
   fill: red;
 }
->>>>>>> 1db3f5e083c2ece953cb13ffcb4f7d5fbab76768
 
 div.a {
    background-color:red;
@@ -209,4 +174,8 @@ div.a {
    background-color:yellow;
   position:absolute;
       
+  }
+
+  h1{
+    font-family: 'Sigmar One', cursive;
   }
