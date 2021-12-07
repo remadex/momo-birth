@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
 body{
 }
 
@@ -121,7 +123,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: blue;
+  background: url("./images/fond.gif");
   transition: all 1s ease;
   opacity: 1;
 }
@@ -149,26 +151,19 @@ body{
   bottom: 0;
 }
 
+.main #showLove {
+  display: none;
+  opacity: 0;
+  transition: all 2s ease;
+  background: none;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.main #showLove svg {
+  fill: red;
+}
 
 div.a {
    background-color:red;
@@ -191,3 +186,10 @@ div.a {
   position:absolute;
       
   }
+<<<<<<< HEAD
+=======
+
+  h1{
+    font-family: 'Sigmar One', cursive;
+  }
+>>>>>>> 06002d5cbcc3856df1fb75da87c95e52dfa2df94
