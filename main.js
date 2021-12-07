@@ -91,6 +91,13 @@ document.getElementById("douze").addEventListener("click", () => {
     setTimeout(() => {
       document.getElementById('showLove').style.opacity = "1";
     }, 200)
+    document.getElementById('showLove').addEventListener("click", () => {
+      console.log("fdsqoihs")
+      var audio = document.getElementById("sexylove");
+      audio.play();
+      var bon = document.getElementById("bonappetit");
+      bon.pause();
+    })
 } )
 function showVideo() {
   // var video = document.getElementById("video-max");
@@ -129,9 +136,12 @@ function clickEvent(e) {
     setTimeout(() => {
       document.getElementById('showLove').style.opacity = "1";
     }, 200)
+    document.getElementById('showLove').addEventListener(() => {
+      var audio = document.getElementById("sexylove");
+      audio.play();
+    })
   }
 }
-
 
 
 
